@@ -1,0 +1,513 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.3.11
+-- Dumped by pg_dump version 9.3.11
+-- Started on 2016-08-28 17:28:39 BRT
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- TOC entry 2050 (class 1262 OID 16385)
+-- Name: fb_posts; Type: DATABASE; Schema: -; Owner: -
+--
+
+CREATE DATABASE fb_posts WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'en_US.UTF-8' LC_CTYPE = 'en_US.UTF-8';
+
+
+\connect fb_posts
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+
+--
+-- TOC entry 1 (class 3079 OID 11789)
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: -
+--
+
+CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
+
+
+--
+-- TOC entry 2053 (class 0 OID 0)
+-- Dependencies: 1
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: -
+--
+
+COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
+
+
+SET search_path = public, pg_catalog;
+
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 182 (class 1259 OID 40989)
+-- Name: alerts; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE alerts (
+    id integer NOT NULL,
+    group_id character varying(255) NOT NULL,
+    users_quantity integer NOT NULL,
+    posts_quantity integer NOT NULL,
+    texts text,
+    first_date timestamp without time zone NOT NULL,
+    last_date timestamp without time zone NOT NULL,
+    alert text,
+    type integer NOT NULL,
+    burst_number integer,
+    logical_control integer
+);
+
+
+--
+-- TOC entry 181 (class 1259 OID 40987)
+-- Name: alerts_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE alerts_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- TOC entry 2054 (class 0 OID 0)
+-- Dependencies: 181
+-- Name: alerts_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE alerts_id_seq OWNED BY alerts.id;
+
+
+--
+-- TOC entry 184 (class 1259 OID 49178)
+-- Name: classification; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE classification (
+    id integer NOT NULL,
+    post_id text NOT NULL,
+    algorithm text,
+    alert_level double precision
+);
+
+
+--
+-- TOC entry 183 (class 1259 OID 49176)
+-- Name: classification_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE classification_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- TOC entry 2055 (class 0 OID 0)
+-- Dependencies: 183
+-- Name: classification_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE classification_id_seq OWNED BY classification.id;
+
+
+--
+-- TOC entry 178 (class 1259 OID 16538)
+-- Name: hashtags; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE hashtags (
+    id integer NOT NULL,
+    post_id character varying(255) NOT NULL,
+    texts text
+);
+
+
+--
+-- TOC entry 177 (class 1259 OID 16536)
+-- Name: hashtags_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE hashtags_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- TOC entry 2056 (class 0 OID 0)
+-- Dependencies: 177
+-- Name: hashtags_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE hashtags_id_seq OWNED BY hashtags.id;
+
+
+--
+-- TOC entry 172 (class 1259 OID 16482)
+-- Name: posts; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE posts (
+    id integer NOT NULL,
+    post_id character varying(512) NOT NULL,
+    user_id character varying(512) NOT NULL,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone,
+    message text NOT NULL,
+    description text,
+    likes_count integer NOT NULL,
+    comments_count integer NOT NULL,
+    shares_count integer NOT NULL,
+    url_quantity integer NOT NULL,
+    hashtags_quantity integer NOT NULL,
+    post_type character(1) NOT NULL
+);
+
+
+--
+-- TOC entry 171 (class 1259 OID 16480)
+-- Name: posts_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE posts_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- TOC entry 2057 (class 0 OID 0)
+-- Dependencies: 171
+-- Name: posts_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE posts_id_seq OWNED BY posts.id;
+
+
+--
+-- TOC entry 176 (class 1259 OID 16523)
+-- Name: similar_posts; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE similar_posts (
+    id integer NOT NULL,
+    group_id character varying(255) NOT NULL,
+    post_id character varying(255) NOT NULL
+);
+
+
+--
+-- TOC entry 175 (class 1259 OID 16521)
+-- Name: similar_posts_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE similar_posts_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- TOC entry 2058 (class 0 OID 0)
+-- Dependencies: 175
+-- Name: similar_posts_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE similar_posts_id_seq OWNED BY similar_posts.id;
+
+
+--
+-- TOC entry 174 (class 1259 OID 16510)
+-- Name: urls; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE urls (
+    id integer NOT NULL,
+    post_id character varying(512) NOT NULL,
+    url text
+);
+
+
+--
+-- TOC entry 173 (class 1259 OID 16508)
+-- Name: urls_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE urls_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- TOC entry 2059 (class 0 OID 0)
+-- Dependencies: 173
+-- Name: urls_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE urls_id_seq OWNED BY urls.id;
+
+
+--
+-- TOC entry 180 (class 1259 OID 16576)
+-- Name: users; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE users (
+    id integer NOT NULL,
+    user_id character varying(512) NOT NULL,
+    username text,
+    url text
+);
+
+
+--
+-- TOC entry 179 (class 1259 OID 16574)
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE users_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- TOC entry 2060 (class 0 OID 0)
+-- Dependencies: 179
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE users_id_seq OWNED BY users.id;
+
+
+--
+-- TOC entry 1909 (class 2604 OID 40992)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY alerts ALTER COLUMN id SET DEFAULT nextval('alerts_id_seq'::regclass);
+
+
+--
+-- TOC entry 1910 (class 2604 OID 49181)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY classification ALTER COLUMN id SET DEFAULT nextval('classification_id_seq'::regclass);
+
+
+--
+-- TOC entry 1907 (class 2604 OID 16541)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY hashtags ALTER COLUMN id SET DEFAULT nextval('hashtags_id_seq'::regclass);
+
+
+--
+-- TOC entry 1904 (class 2604 OID 16485)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY posts ALTER COLUMN id SET DEFAULT nextval('posts_id_seq'::regclass);
+
+
+--
+-- TOC entry 1906 (class 2604 OID 16526)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY similar_posts ALTER COLUMN id SET DEFAULT nextval('similar_posts_id_seq'::regclass);
+
+
+--
+-- TOC entry 1905 (class 2604 OID 16513)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY urls ALTER COLUMN id SET DEFAULT nextval('urls_id_seq'::regclass);
+
+
+--
+-- TOC entry 1908 (class 2604 OID 16579)
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY users ALTER COLUMN id SET DEFAULT nextval('users_id_seq'::regclass);
+
+
+--
+-- TOC entry 1932 (class 2606 OID 40999)
+-- Name: alerts_group_id_key; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY alerts
+    ADD CONSTRAINT alerts_group_id_key UNIQUE (group_id);
+
+
+--
+-- TOC entry 1934 (class 2606 OID 40997)
+-- Name: alerts_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY alerts
+    ADD CONSTRAINT alerts_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 1936 (class 2606 OID 49186)
+-- Name: classification_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY classification
+    ADD CONSTRAINT classification_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 1938 (class 2606 OID 49188)
+-- Name: classification_post_id_key; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY classification
+    ADD CONSTRAINT classification_post_id_key UNIQUE (post_id);
+
+
+--
+-- TOC entry 1924 (class 2606 OID 16546)
+-- Name: hashtags_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY hashtags
+    ADD CONSTRAINT hashtags_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 1912 (class 2606 OID 16490)
+-- Name: posts_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY posts
+    ADD CONSTRAINT posts_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 1914 (class 2606 OID 16492)
+-- Name: posts_post_id_key; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY posts
+    ADD CONSTRAINT posts_post_id_key UNIQUE (post_id);
+
+
+--
+-- TOC entry 1920 (class 2606 OID 16531)
+-- Name: similar_posts_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY similar_posts
+    ADD CONSTRAINT similar_posts_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 1922 (class 2606 OID 16535)
+-- Name: similar_posts_post_id_key; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY similar_posts
+    ADD CONSTRAINT similar_posts_post_id_key UNIQUE (post_id);
+
+
+--
+-- TOC entry 1926 (class 2606 OID 32776)
+-- Name: uniquehashtags; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY hashtags
+    ADD CONSTRAINT uniquehashtags UNIQUE (post_id, texts);
+
+
+--
+-- TOC entry 1916 (class 2606 OID 32778)
+-- Name: uniqueurls; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY urls
+    ADD CONSTRAINT uniqueurls UNIQUE (post_id, url);
+
+
+--
+-- TOC entry 1918 (class 2606 OID 16518)
+-- Name: urls_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY urls
+    ADD CONSTRAINT urls_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 1928 (class 2606 OID 16584)
+-- Name: users_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY users
+    ADD CONSTRAINT users_pkey PRIMARY KEY (id);
+
+
+--
+-- TOC entry 1930 (class 2606 OID 16586)
+-- Name: users_user_id_key; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY users
+    ADD CONSTRAINT users_user_id_key UNIQUE (user_id);
+
+
+--
+-- TOC entry 2052 (class 0 OID 0)
+-- Dependencies: 6
+-- Name: public; Type: ACL; Schema: -; Owner: -
+--
+
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+REVOKE ALL ON SCHEMA public FROM postgres;
+GRANT ALL ON SCHEMA public TO postgres;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+-- Completed on 2016-08-28 17:28:39 BRT
+
+--
+-- PostgreSQL database dump complete
+--
+
