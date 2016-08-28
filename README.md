@@ -63,28 +63,38 @@ Once started, everything will be stored in fb_posts database and posts_security.
 
 ## Documentation and media
 
-Official EWS website:
+#### Official EWS website:
 
 https://gtews.ime.usp.br/ <br />
 https://horus.ime.usp.br/ <br />
 https://horus.rnp.br/#/
 
-Official EWS documentation:
+#### Official EWS documentation:
 
 Screenshots and video demonstrations: https://horus.ime.usp.br/demo.php <br />
 RNP (Brazil's NREN) - GT-EWS description: https://www.rnp.br/sites/default/files/gt-ews.pdf
 
-Scientific papers:
+Universities and organizations:
+
+RNP - About GT-EWS: https://www.rnp.br/noticias/pesquisadores-usp-desenvolvem-ferramenta-detectar-ataques-ciberneticos-por-redes-sociais <br />
+NapSoL - USP - Interview with Rodrigo Campiolo (GT-EWS): http://napsol.icmc.usp.br/en/node/330 <br />
+AUN - USP - About GT-EWS: http://www.usp.br/aun/exibir?id=6954 <br />
+Agencia USP - USP - About GT-EWS: http://www.usp.br/agen/?p=207489 <br />
+UTFPR - About GT-EWS: http://www.utfpr.edu.br/campomourao/estrutura-universitaria/assessorias/ascom/noticias/ultimas-noticias-1/projeto-p-d-envolve-a-cooperacao-entre-a-usp-utfpr-cm-ufba-e-pop-ba <br />
+Sofware Livre Brasil - Free Sofware Brazil - About GT-EWS: http://softwarelivre.org/portal/noticias/projeto-pd-envolve-a-cooperacao-entre-a-usp-utfpr-cm-ufba-e-pop-ba.
+
+
+#### Scientific papers:
 
 TNC'16 - GT-EWS presentation: https://tnc16.geant.org/core/presentation/707 <br />
 TNC'16 - GT-EWS recorded presentation: https://tnc16.geant.org/web/media/archive/2B <br />
 TNC'16 - GT-EWS paper: https://tnc16.geant.org/getfile/2691 <br />
 TNC'16 - GT-EWS slides: https://tnc16.geant.org/getfile/2762
 
-WRNP 2015 - Workshop RNP (Brazil's NREN): https://www.dropbox.com/s/o7zi0ok6pe9qt4a/WRNP2015_Lamina_Stand_03.pdf?dl=0 <br />
+WRNP 2015 - Workshop RNP (Brazil's NREN): http://portal.rnp.br/c/document_library/get_file?uuid=f12247c8-e220-44df-92b6-24c31d8f11a0&groupId=2110698 <br />
 WRNP 2016 - Workshop RNP (Brazil's NREN): http://wrnp.rnp.br/sites/wrnp2016/files/wrnp2016_lamina_gt_ews.pdf
 
-General media websites:
+#### General media websites:
 
 IDG NOW!: http://idgnow.com.br/internet/2016/08/18/novo-sistema-criado-na-usp-protege-comunidade-cientifica-de-ataques/ <br />
 Brasileiros: http://brasileiros.com.br/MFlIE <br />
