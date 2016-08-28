@@ -71,34 +71,34 @@ https://horus.rnp.br/#/
 
 #### Official EWS documentation:
 
-Screenshots and video demonstrations: https://horus.ime.usp.br/demo.php <br />
-RNP (Brazil's NREN) - GT-EWS description: https://www.rnp.br/sites/default/files/gt-ews.pdf
+Screenshots and video demonstrations: <a href="https://horus.ime.usp.br/demo.php">here</a> <br />
+RNP (Brazil's NREN) - GT-EWS description: <a href="https://www.rnp.br/sites/default/files/gt-ews.pdf">here</a>
 
 Universities and organizations:
 
-RNP - About GT-EWS: https://www.rnp.br/noticias/pesquisadores-usp-desenvolvem-ferramenta-detectar-ataques-ciberneticos-por-redes-sociais <br />
-NapSoL - USP - Interview with Rodrigo Campiolo (GT-EWS): http://napsol.icmc.usp.br/en/node/330 <br />
-AUN - USP - About GT-EWS: http://www.usp.br/aun/exibir?id=6954 <br />
-Agencia USP - USP - About GT-EWS: http://www.usp.br/agen/?p=207489 <br />
-UTFPR - About GT-EWS: http://www.utfpr.edu.br/campomourao/estrutura-universitaria/assessorias/ascom/noticias/ultimas-noticias-1/projeto-p-d-envolve-a-cooperacao-entre-a-usp-utfpr-cm-ufba-e-pop-ba <br />
-Sofware Livre Brasil - Free Sofware Brazil - About GT-EWS: http://softwarelivre.org/portal/noticias/projeto-pd-envolve-a-cooperacao-entre-a-usp-utfpr-cm-ufba-e-pop-ba.
+RNP - About GT-EWS: <a href="https://www.rnp.br/noticias/pesquisadores-usp-desenvolvem-ferramenta-detectar-ataques-ciberneticos-por-redes-sociais">here</a> <br />
+NapSoL - USP - Interview with Rodrigo Campiolo (GT-EWS): <a href="http://napsol.icmc.usp.br/en/node/330">here</a> <br />
+AUN - USP - About GT-EWS: <a href="http://www.usp.br/aun/exibir?id=6954">here</a> <br />
+Agencia USP - USP - About GT-EWS: <a href="http://www.usp.br/agen/?p=207489">here</a> <br />
+UTFPR - About GT-EWS: <a href="http://www.utfpr.edu.br/campomourao/estrutura-universitaria/assessorias/ascom/noticias/ultimas-noticias-1/projeto-p-d-envolve-a-cooperacao-entre-a-usp-utfpr-cm-ufba-e-pop-ba">here</a> <br />
+Sofware Livre Brasil - Free Sofware Brazil - About GT-EWS: <a href="http://softwarelivre.org/portal/noticias/projeto-pd-envolve-a-cooperacao-entre-a-usp-utfpr-cm-ufba-e-pop-ba.">here</a>
 
 
 #### Scientific papers:
 
-TNC'16 - GT-EWS presentation: https://tnc16.geant.org/core/presentation/707 <br />
-TNC'16 - GT-EWS recorded presentation: https://tnc16.geant.org/web/media/archive/2B <br />
-TNC'16 - GT-EWS paper: https://tnc16.geant.org/getfile/2691 <br />
-TNC'16 - GT-EWS slides: https://tnc16.geant.org/getfile/2762
+TNC'16 - GT-EWS presentation: <a href="https://tnc16.geant.org/core/presentation/707">here</a> <br />
+TNC'16 - GT-EWS recorded presentation: <a href="https://tnc16.geant.org/web/media/archive/2B">here</a> <br />
+TNC'16 - GT-EWS paper: <a href="https://tnc16.geant.org/getfile/2691">here</a> <br />
+TNC'16 - GT-EWS slides: <a href="https://tnc16.geant.org/getfile/2762">here</a>
 
-WRNP 2015 - Workshop RNP (Brazil's NREN): http://portal.rnp.br/c/document_library/get_file?uuid=f12247c8-e220-44df-92b6-24c31d8f11a0&groupId=2110698 <br />
-WRNP 2016 - Workshop RNP (Brazil's NREN): http://wrnp.rnp.br/sites/wrnp2016/files/wrnp2016_lamina_gt_ews.pdf
+WRNP 2015 - Workshop RNP (Brazil's NREN): <a href="http://portal.rnp.br/c/document_library/get_file?uuid=f12247c8-e220-44df-92b6-24c31d8f11a0&groupId=2110698">here</a> <br />
+WRNP 2016 - Workshop RNP (Brazil's NREN): <a href="http://wrnp.rnp.br/sites/wrnp2016/files/wrnp2016_lamina_gt_ews.pdf">here</a>
 
 #### General media websites:
 
-IDG NOW!: http://idgnow.com.br/internet/2016/08/18/novo-sistema-criado-na-usp-protege-comunidade-cientifica-de-ataques/ <br />
-Brasileiros: http://brasileiros.com.br/MFlIE <br />
-ComputerWorld: http://computerworld.com.br/pesquisador-da-usp-cria-sistema-contra-ataques-comunidade-cientifica
+IDG NOW!: <a href="http://idgnow.com.br/internet/2016/08/18/novo-sistema-criado-na-usp-protege-comunidade-cientifica-de-ataques/">here</a> <br />
+Brasileiros: <a href="http://brasileiros.com.br/MFlIE">here</a> <br />
+ComputerWorld: <a href="http://computerworld.com.br/pesquisador-da-usp-cria-sistema-contra-ataques-comunidade-cientifica">here</a>
 
 ## Authors
 
