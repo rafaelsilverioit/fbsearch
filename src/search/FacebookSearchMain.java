@@ -34,13 +34,13 @@ import org.json.simple.JSONObject;
  * @author Rafael Silvério Amaral and Rodrigo Campiolo
  * @email rafael.silverio.it@gmail.com and rcampiolo@utfpr.edu.br
  */
+@SuppressWarnings("unused")
 public class FacebookSearchMain {
 	private static Properties conf = null;
 	private static Logger logger = null;
 	private static FacebookClient fbClient = null;
 	private static Date lastDate;
 
-	@SuppressWarnings("unchecked")
 	public static void main(String[] args) throws Exception {
 		int queryInterval = 0;
 		int time = 0;

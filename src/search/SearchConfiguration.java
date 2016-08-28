@@ -67,6 +67,7 @@ public class SearchConfiguration {
 		@SuppressWarnings("deprecation")
 		DefaultFacebookClient df = new DefaultFacebookClient();
 		
+		@SuppressWarnings("unused")
 		AccessToken accessToken = df.obtainAppAccessToken(appid, appsecret);
 		
 		FacebookClient facebookClient = new DefaultFacebookClient(

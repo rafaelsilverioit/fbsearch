@@ -6,7 +6,7 @@
 /bin/
 /git_old/
 
-.tar.gz
+*.tar.gz
 .classpath
 
 FacebookSearch2.jar
