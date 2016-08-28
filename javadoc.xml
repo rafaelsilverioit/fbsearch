@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="javadoc">
+    <target name="javadoc">
+        <javadoc access="public" author="true" classpath="lib/commons-lang3-3.4.jar:lib/apache/jna-4.1.0.jar:/home/rafael/Downloads/gson-1.4.jar:lib/sqlite-jdbc-3.7.2.jar:lib/stringsearch-2.1.jar:lib/apache/httpmime-4.4.jar:lib/apache/httpclient-4.4.jar:lib/restfb-1.11.0.jar:lib/apache/jna-platform-4.1.0.jar:/home/rafael/Downloads/longurlJavaAPI.jar:lib/apache/httpclient-win-4.4.jar:lib/apache/httpcore-4.4.jar:lib/postgresql-9.4-1200.jdbc4.jar:lib/apache/commons-logging-1.2.jar:lib/apache/fluent-hc-4.4.jar:/home/rafael/Downloads/json-simple-1.1.1.jar:lib/apache/commons-codec-1.9.jar:lib/apache/httpclient-cache-4.4.jar:/home/rafael/Downloads/c3p0-0.9.1.1.jar" destdir="javadocs" doctitle="FacebookSearch" nodeprecated="false" nodeprecatedlist="false" noindex="false" nonavbar="false" notree="false" packagenames="persistence.dao,clusters,persistence.entities,filters,search,util,persistence,persistence.controller,normalizers" source="1.8" sourcepath="src" splitindex="true" use="true" version="true"/>
+    </target>
+</project>

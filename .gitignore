@@ -1,0 +1,13 @@
+/nbproject/
+/build/
+
+/dist/
+/.git/
+/bin/
+/git_old/
+
+.tar.gz
+.classpath
+
+FacebookSearch2.jar
+build.xml
