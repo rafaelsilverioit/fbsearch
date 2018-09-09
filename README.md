@@ -2,7 +2,7 @@
 
 ## Description
 
-FacebookSearch module is part of a Early Warning System called GT-EWS which focus on prevent and detect security threats.
+FacebookSearch module is part of an Early Warning System called GT-EWS which focus on prevent and detect security threats.
 
 The main achievement of GT-EWS in its first stage (November, 2014 - October, 2015) was to delivery a prototype of an Early Warning System (EWS) that anticipates security events and incidents against network and computer systems located at RNP (Brazilian NREN).
 
@@ -12,7 +12,7 @@ Briefly, it was confirmed that Facebook and Twitter are relevant sources of info
 
 ## Hardware requirements
 
-Minium recommendations:
+Minimum recommendations:
 
 * RAM: 512 MB;
 * Hard drive: 50 GiB HD;
